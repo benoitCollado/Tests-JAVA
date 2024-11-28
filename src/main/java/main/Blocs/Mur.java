@@ -1,8 +1,13 @@
+package main.Blocs;
+
+import main.Components.Couleur;
+import main.Exceptions.IllegalBlocException;
+
 public class Mur extends Bloc{
 
   protected boolean porteur;
 
-  Mur(final float longueur, final float largeur, final float hauteur,final boolean porteur)throws IllegalBlocException{
+  public Mur(final float longueur, final float largeur, final float hauteur,final boolean porteur)throws IllegalBlocException{
     super(longueur, largeur, hauteur);
     this.porteur = porteur;
     this.couleur = Couleur.GRIS;

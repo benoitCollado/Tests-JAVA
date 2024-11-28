@@ -1,16 +1,20 @@
+package main.Kit;
+
 import java.util.Set;
 import java.util.List;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
+import main.Blocs.*;
+import main.Exceptions.*;
 
-class Kit {
+public class Kit {
   List<IBloc> blocs;
   Set<String> keyWords;
 
-  Kit() throws IllegalBlocException{
+  public Kit() throws IllegalBlocException{
     blocs = new ArrayList<IBloc>();
     keyWords = new LinkedHashSet<String>();
-    blocs.add(new Mur(.1f, 2.0f, 2.0f, true));
+    blocs.add(new Mur(1.0f, 2.0f, 2.0f, true));
     blocs.add(new Mur(3.0f, 2.0f, 2.0f, true));
     blocs.add(new Mur(2.0f, 1.0f, 2.0f, false));
     blocs.add(new Mur(2.0f, 1.0f, 2.0f, false));

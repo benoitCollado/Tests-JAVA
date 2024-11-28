@@ -1,3 +1,5 @@
+package main;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.LinkedHashSet;
@@ -5,6 +7,8 @@ import java.util.Set;
 import java.util.Map;
 import java.util.HashMap;
 
+import main.Blocs.*;
+import main.Exceptions.*;
 public class Test{
   public static void implémentations() throws IllegalBlocException{
     Bloc mur = new Mur(1.0f, 2.0f, 3.0f, true);

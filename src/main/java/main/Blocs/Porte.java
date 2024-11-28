@@ -1,8 +1,13 @@
+package main.Blocs;
+
 import java.util.logging.Level;
+import main.Components.Couleur;
+import main.Exceptions.PorteVerouilleException;
+import main.Exceptions.IllegalBlocException;
 
 public class Porte extends Bloc{
   protected boolean isLocked;
-  Porte(final float longueur, final float largeur, final float hauteur, final boolean isLocked) throws IllegalBlocException{
+  public Porte(final float longueur, final float largeur, final float hauteur, final boolean isLocked) throws IllegalBlocException{
     super(longueur, largeur, hauteur);
     this.isLocked = isLocked;
     this.couleur = Couleur.BLEU;

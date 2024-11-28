@@ -1,4 +1,4 @@
-// import static org.junit.jupiter.api.Assertions.assertEquals;
+package main;// import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // import org.junit.jupiter.api.Test;
 
@@ -6,6 +6,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+import main.Kit.*;
+import main.Exceptions.*;
   
 public class Main {
   public static void main(String[] args){
@@ -35,9 +37,6 @@ public class Main {
     }
  
   }
-  
-  }
-
   // @Test
   // void addition() {
   //     assertEquals(2, 1 + 1);
