@@ -1,4 +1,4 @@
-package main;// import static org.junit.jupiter.api.Assertions.assertEquals;
+// import static org.junit.jupiter.api.Assertions.assertEquals;
 
 // import org.junit.jupiter.api.Test;
 
@@ -6,8 +6,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import main.Kit.*;
-import main.Exceptions.*;
+import Kit.*;
+import Exceptions.*;
   
 public class Main {
   public static void main(String[] args){
@@ -30,6 +30,8 @@ public class Main {
         default:
           break;
       }
+
+      kitStarter.afficheKit();
     }catch(IllegalBlocException e){
       System.out.println("Erreur lors de la création du kit : " + e.getMessage());
     }catch(IOException e){

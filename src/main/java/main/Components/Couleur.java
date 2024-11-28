@@ -1,4 +1,4 @@
-package main.Components;
+package Components;
 
 public enum Couleur{
   VERT,

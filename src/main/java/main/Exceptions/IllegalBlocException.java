@@ -1,4 +1,4 @@
-package main.Exceptions;
+package Exceptions;
 
 import java.lang.Exception;
 

@@ -16,7 +16,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
               <artifactId>exec-maven-plugin</artifactId>
               <version>3.5.0</version>
               <configuration>
-                  <mainClass>main.Main</mainClass> <!-- Assurez-vous que le nom de la classe principale est correct -->
+                  <mainClass>Main</mainClass> <!-- Assurez-vous que le nom de la classe principale est correct -->
               </configuration>
           </plugin>
       </plugins>

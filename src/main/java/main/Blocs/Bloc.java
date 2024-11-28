@@ -1,12 +1,12 @@
-package main.Blocs;
+package Blocs;
   
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.FileHandler;
 import java.util.logging.SimpleFormatter;
 
-import main.Components.Couleur;
-import main.Exceptions.IllegalBlocException;
+import Components.Couleur;
+import Exceptions.IllegalBlocException;
 
 
 public abstract class Bloc implements IBloc{
@@ -29,7 +29,7 @@ public abstract class Bloc implements IBloc{
   public Bloc(final float longueur, final float largeur, final float hauteur) throws IllegalBlocException {
     if(longueur < MIN_LONGUEUR || largeur < MIN_LARGEUR || hauteur < MIN_HAUTEUR) {
       
-      logger.log(Level.SEVERE, "Les valeurs minimales pour longeur, larger et hauteur ne sont pas respectées dans : " + Thread.currentThread().getStackTrace()[3].getClassName() + " " + Thread.currentThread().getStackTrace()[3].getMethodName() + "  ligne : " + Thread.currentThread().getStackTrace()[3].getLineNumber());
+      logger.log(Level.SEVERE, "Les valeurs minimales pour longeur, larger et hauteur ne sont pas respectées dans : " + Thread.currentThread().getStackTrace()[4].getClassName() + " " + Thread.currentThread().getStackTrace()[4].getMethodName() + "  ligne : " + Thread.currentThread().getStackTrace()[4].getLineNumber());
       throw new IllegalBlocException();
     }
     this.longueur = longueur;

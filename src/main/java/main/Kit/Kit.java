@@ -1,11 +1,14 @@
-package main.Kit;
+package Kit;
 
 import java.util.Set;
 import java.util.List;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
-import main.Blocs.*;
-import main.Exceptions.*;
+
+import Blocs.*;
+import Exceptions.*;
+
+import java.util.function.Consumer;
 
 public class Kit {
   List<IBloc> blocs;
@@ -41,33 +44,23 @@ public class Kit {
   }
 
   public void afficheKit(){
-    System.out.println("Kit : ");
-    System.out.println("  Blocs : ");
-    System.out.println("    nombrer de blocs : " + blocs.size());
-    for(IBloc bloc : blocs){
-      bloc.afficheBloc();
-    }
-    System.out.println("  KeyWords : ");
-    for(String keyWord : keyWords){
-      System.out.println("    " + keyWord);
-    }
+    this.afficherBlocs();
+    this.afficherKeyWords();
   }
 
   public void afficherBlocs(){
     System.out.println("Kit : ");
     System.out.println("  Blocs : ");
     System.out.println("    nombrer de blocs : " + blocs.size());
-    for(IBloc bloc : blocs){
-      bloc.afficheBloc();
-    }
+    Consumer<IBloc> afficherBloc = bloc ->{bloc.afficheBloc();};
+    this.blocs.forEach(afficherBloc);
   }
 
   public void afficherKeyWords(){
     System.out.println("Kit : ");
     System.out.println("  KeyWords : ");
-    for(String keyWord : keyWords){
-      System.out.println("    " + keyWord);
-    }
+    Consumer<String> afficherKeyWord = keyWord ->{System.out.println(keyWord);};
+    this.keyWords.forEach(afficherKeyWord);
   }
   
 }
