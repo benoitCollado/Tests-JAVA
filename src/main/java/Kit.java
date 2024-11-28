@@ -10,13 +10,13 @@ class Kit {
   Kit() throws IllegalBlocException{
     blocs = new ArrayList<IBloc>();
     keyWords = new LinkedHashSet<String>();
-    blocs.add(new Mur(3.0f, 2.0f, 2.0f, true));
+    blocs.add(new Mur(.1f, 2.0f, 2.0f, true));
     blocs.add(new Mur(3.0f, 2.0f, 2.0f, true));
     blocs.add(new Mur(2.0f, 1.0f, 2.0f, false));
     blocs.add(new Mur(2.0f, 1.0f, 2.0f, false));
     blocs.add(new Porte(1.0f, 2.0f, 2.0f, true));
 
-    keyWords.add("Muraile");
+    keyWords.add("Muraille");
     keyWords.add("Cabane");
   }
 

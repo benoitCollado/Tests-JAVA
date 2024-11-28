@@ -1,9 +1,23 @@
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.logging.FileHandler;
+import java.util.logging.SimpleFormatter;
+import java.lang.StackTraceElement;
+
+
 public abstract class Bloc implements IBloc{
 
   protected static final Logger logger = Logger.getLogger(Bloc.class.getName());
+  static{
+    try{
+      FileHandler fileHandler = new FileHandler("log.txt");
+      fileHandler.setFormatter(new SimpleFormatter());
+      logger.addHandler(fileHandler);
+    }catch(Exception e){
+      logger.log(Level.SEVERE, "Erreur lors de la création du fichier de log", e.getMessage());
+    }
+  }
   protected float longueur;
   protected float largeur;
   protected float hauteur;
@@ -11,8 +25,7 @@ public abstract class Bloc implements IBloc{
 
   Bloc(final float longueur, final float largeur, final float hauteur) throws IllegalBlocException {
     if(longueur < MIN_LONGUEUR || largeur < MIN_LARGEUR || hauteur < MIN_HAUTEUR) {
-
-      logger.log(Level.SEVERE, "Les valeurs minimales pour longeur, larger et hauteur ne sont pas respectées");
+      logger.log(Level.SEVERE, "Les valeurs minimales pour longeur, larger et hauteur ne sont pas respectées dans : " + Thread.currentThread().getStackTrace()[0].getClassName() + " " + Thread.currentThread().getStackTrace()[0].getMethodName() + "  ligne : " + Thread.currentThread().getStackTrace()[0].getLineNumber());
       throw new IllegalBlocException();
     }
     this.longueur = longueur;

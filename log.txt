@@ -1,0 +1,2 @@
+Nov 28, 2024 2:00:01 PM Bloc <init>
+SEVERE: Les valeurs minimales pour longeur, larger et hauteur ne sont pas respectées dans : java.lang.Thread getStackTrace  ligne : 1610
