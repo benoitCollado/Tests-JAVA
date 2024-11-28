@@ -49,5 +49,21 @@ class Kit {
     }
   }
 
+  public void afficherBlocs(){
+    System.out.println("Kit : ");
+    System.out.println("  Blocs : ");
+    System.out.println("    nombrer de blocs : " + blocs.size());
+    for(IBloc bloc : blocs){
+      bloc.afficheBloc();
+    }
+  }
+
+  public void afficherKeyWords(){
+    System.out.println("Kit : ");
+    System.out.println("  KeyWords : ");
+    for(String keyWord : keyWords){
+      System.out.println("    " + keyWord);
+    }
+  }
   
 }

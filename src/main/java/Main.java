@@ -2,27 +2,35 @@
 
 // import org.junit.jupiter.api.Test;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
   
 public class Main {
-  public static void main(String[] args) {
-    try{
-      Kit kitStarter = new Kit();
-       kitStarter.afficheKit();
-      kitStarter.addBloc(new Mur(1.0f, 2.0f, 6.0f, true));
-      for(IBloc bloc : kitStarter.getBlocs()){
-        if(bloc instanceof Porte){
-         ((Porte)bloc).verouiller();
-        }
-      }
-    }catch(Exception e){
-      if(e instanceof IllegalBlocException){
-        System.out.println("Valeurs pour contruire le bloc invalides");
-      }else if(e instanceof PorteVerouilleException){
-        System.out.println("La porte est déjà verouillée");
-      }
+  public static void main(String[] args) throws IllegalBlocException {
+    BufferedReader fluxEntree = new BufferedReader(new InputStreamReader(System.in));
+    Kit kitStarter = new Kit();
     
+    try{
+      System.out.println("Que souhaitez-vous afficher ? 1 - Les idées de constructions. 2 - Le nombre de blocs pour chaque type de blocs présent dans le kit");
+      String saisieUtilisateur = fluxEntree.readLine();
+      switch(saisieUtilisateur){
+        case "1" : 
+          kitStarter.afficherKeyWords();
+          break;
+        case "2" :
+          kitStarter.afficherBlocs();
+          break;
+        default:
+          break;
+      }
+      
+    } catch(IOException e){
+      
+      System.out.println("Erreur lors de la saisie" + e);
     }
+    
   char[] listChar = {'a','b','c'};
     System.out.println(fonction(listChar));
  
