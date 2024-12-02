@@ -1,10 +1,2 @@
-Nov 28, 2024 4:10:02 PM Blocs.Bloc <init>
-INFO: Un Bloc de type : Blocs.Mur a été créé
-Nov 28, 2024 4:10:02 PM Blocs.Bloc <init>
-INFO: Un Bloc de type : Blocs.Mur a été créé
-Nov 28, 2024 4:10:02 PM Blocs.Bloc <init>
-INFO: Un Bloc de type : Blocs.Mur a été créé
-Nov 28, 2024 4:10:02 PM Blocs.Bloc <init>
-INFO: Un Bloc de type : Blocs.Mur a été créé
-Nov 28, 2024 4:10:02 PM Blocs.Bloc <init>
-INFO: Un Bloc de type : Blocs.Porte a été créé
+Dec 02, 2024 9:18:08 AM main.Blocs.Bloc <init>
+INFO: Un Bloc de type : main.Blocs.Mur a été créé

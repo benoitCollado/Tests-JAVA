@@ -1,12 +1,12 @@
-package Blocs;
+package main.Blocs;
   
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.FileHandler;
 import java.util.logging.SimpleFormatter;
 
-import Components.Couleur;
-import Exceptions.IllegalBlocException;
+import main.Components.Couleur;
+import main.Exceptions.IllegalBlocException;
 
 
 public abstract class Bloc implements IBloc{

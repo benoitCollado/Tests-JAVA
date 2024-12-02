@@ -1,9 +1,9 @@
-package Blocs;
+package main.Blocs;
 
 import java.util.logging.Level;
-import Components.Couleur;
-import Exceptions.PorteVerouilleException;
-import Exceptions.IllegalBlocException;
+import main.Components.Couleur;
+import main.Blocs.*;
+import main.Exceptions.*;
 
 public class Porte extends Bloc{
   protected boolean isLocked;

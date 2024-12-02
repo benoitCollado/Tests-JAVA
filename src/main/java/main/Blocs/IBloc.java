@@ -1,4 +1,4 @@
-package Blocs;
+package main.Blocs;
 
 public interface IBloc{
   float MIN_LONGUEUR = 1.0f;

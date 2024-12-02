@@ -1,12 +1,12 @@
-package Kit;
+package main.Kit;
 
 import java.util.Set;
 import java.util.List;
 import java.util.LinkedHashSet;
 import java.util.ArrayList;
 
-import Blocs.*;
-import Exceptions.*;
+import main.Blocs.*;
+import main.Exceptions.*;
 
 import java.util.function.Consumer;
 

@@ -1,7 +1,7 @@
-package Blocs;
+package main.Blocs;
 
-import Components.Couleur;
-import Exceptions.IllegalBlocException;
+import main.Components.Couleur;
+import main.Exceptions.IllegalBlocException;
 
 public class Mur extends Bloc{
 
